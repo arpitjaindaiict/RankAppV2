@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>E name:</b>
+  <%= @master.e_name %>
+</p>
+
+<p>
+  <b>Task:</b>
+  <%= @master.task %>
+</p>
+
+<p>
+  <b>Startdate:</b>
+  <%= @master.startdate %>
+</p>
+
+<p>
+  <b>Enddate:</b>
+  <%= @master.enddate %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%= @master.points %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @master.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_master_path(@master) %> |
+<%= link_to 'Back', masters_path %>

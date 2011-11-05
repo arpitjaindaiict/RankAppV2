@@ -1,0 +1,33 @@
+<h1>Listing masters</h1>
+
+<table>
+  <tr>
+    <th>E name</th>
+    <th>Task</th>
+    <th>Startdate</th>
+    <th>Enddate</th>
+    <th>Points</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @masters.each do |master| %>
+  <tr>
+    <td><%= master.e_name %></td>
+    <td><%= master.task %></td>
+    <td><%= master.startdate %></td>
+    <td><%= master.enddate %></td>
+    <td><%= master.points %></td>
+    <td><%= master.comment %></td>
+    <td><%= link_to 'Show', master %></td>
+    <td><%= link_to 'Edit', edit_master_path(master) %></td>
+    <td><%= link_to 'Destroy', master, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Master', new_master_path %>
