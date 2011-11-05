@@ -28,6 +28,31 @@
 <% end %>
 </table>
 
+
+
 <br />
 
-<%= link_to 'New Master', new_master_path %>
+<%= link_to 'Assign New Task', new_master_path %>
+
+<h1>Grand Total</h1>
+<p></p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Points</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  
+
+<% @b.each do |rank| %>
+  <tr>
+    <td><%= rank.name %></td>
+    <td><%= rank.points %></td>
+    </tr>
+<% end %>
+</table>
+

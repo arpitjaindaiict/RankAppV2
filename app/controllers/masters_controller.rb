@@ -3,13 +3,14 @@ class MastersController < ApplicationController
   # GET /masters
   # GET /masters.xml
   def index
-    @masters = Master.all
-
+    m = Master.select("*")
+	@masters = m.order("e_name asc")
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @masters }
 
-      a = Master.select("e_name as name, sum(points) as points").group("e_name")
+      a1= Master.select("e_name as name, sum(points) as points").group("e_name")
+      a = a1.order("points DESC")
       @b = a.all
     end
 

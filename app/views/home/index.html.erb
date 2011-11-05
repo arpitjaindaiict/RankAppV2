@@ -1,9 +1,9 @@
-<h1>Rank Page</h1>
+<h1><i>Ranks! for this month</i></h1>
 <p></p>
 
 <table>
   <tr>
-    <th>Name</th>
+	  <th>Name</th>
     <th>Points</th>
     <th></th>
     <th></th>
@@ -11,12 +11,12 @@
   </tr>
 
   
-
+  
 <% @y.each do |rank| %>
-  <tr>
-    <td><%= rank.name %></td>
-    <td><%= rank.points %></td>
-    </tr>
+	<tr>
+		<td><%= rank.name %></td>
+		<td><%= rank.points %></td>
+		</tr>
 <% end %>
 </table>
 
