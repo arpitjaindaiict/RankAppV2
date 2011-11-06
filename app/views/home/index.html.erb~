@@ -1,6 +1,6 @@
 <html>
 
-<frameset cols="60%,40%">
+<frameset cols="80%,40%">
 
   <frame src="/rank/index" />
   <frame src="/main_up_task/index" />
