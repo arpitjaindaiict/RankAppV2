@@ -1,4 +1,10 @@
+require 'digest/md5'
+
 class MastersController < ApplicationController
+  
+  USERS = {"admin" => "password"}  # username: admin password: password
+
+  before_filter :authenticate
 
   # GET /masters
   # GET /masters.xml
@@ -50,7 +56,7 @@ class MastersController < ApplicationController
 
     respond_to do |format|
       if @master.save
-        format.html { redirect_to(@master, :notice => 'Master was successfully created.') }
+        format.html { redirect_to(@master, :notice => 'Task was successfully created.') }
         format.xml  { render :xml => @master, :status => :created, :location => @master }
       else
         format.html { render :action => "new" }
@@ -66,7 +72,7 @@ class MastersController < ApplicationController
 
     respond_to do |format|
       if @master.update_attributes(params[:master])
-        format.html { redirect_to(@master, :notice => 'Master was successfully updated.') }
+        format.html { redirect_to(@master, :notice => 'Task was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -86,4 +92,13 @@ class MastersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+	
+ private
+    def authenticate
+      authenticate_or_request_with_http_digest() do |username|
+        USERS[username]
+      end
+    end
+
 end
+

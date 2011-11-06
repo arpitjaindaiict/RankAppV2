@@ -29,9 +29,6 @@
 </table>
 
 
-<p>
-  <a href="/">home</a>
-</p>
 
 <br />
 
@@ -59,3 +56,7 @@
 <% end %>
 </table>
 
+
+<p>
+  <a href="/">home</a>
+</p>
