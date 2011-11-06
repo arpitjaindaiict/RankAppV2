@@ -1,4 +1,4 @@
-<h1>Listing masters</h1>
+<h1>List of Tasks</h1>
 
 <table>
   <tr>
@@ -29,6 +29,9 @@
 </table>
 
 
+<p>
+  <a href="/">home</a>
+</p>
 
 <br />
 

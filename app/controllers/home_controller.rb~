@@ -3,11 +3,19 @@ class HomeController < ApplicationController
 	  m = Time.now.month.to_s
 	  y = Time.now.year.to_s
 	  d = y+"-"+m+"-"+"01"
-	  i = 0
-	  x1 = Master.select("? as n, e_name as name, sum(points) as points",i += 1).where("enddate >= ? ", d).group("e_name")
+	   
+	  x1 = Master.select("e_name as name, sum(points) as points").where("enddate >= ? ", d).group("e_name")
 	   x = x1.order("points desc")
+	   
 	@y = x.all
 
-  end
+	m = Master.select("*")
+
+	@masters = m.order("e_name asc")
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @masters }
+	
+   end
 
 end

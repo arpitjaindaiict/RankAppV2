@@ -2,21 +2,30 @@
 <p></p>
 
 <table>
-  <tr>
-	  <th>Name</th>
-    <th>Points</th>
+	<tr>
+		<th>Rank</th>
+		<th>Name</th>
+		<th>Points</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
   
-  
-<% @y.each do |rank| %>
-	<tr>
+  <% i = 0 %>
+  <% @y.each do |rank| %>
+	  
+	  <tr>
+		  <% i= i+1 %>
+		  <td><%= i %></td>
 		<td><%= rank.name %></td>
 		<td><%= rank.points %></td>
 		</tr>
 <% end %>
 </table>
+
+
+<p>
+  <a href="/masters">admin</a>
+</p>
 
