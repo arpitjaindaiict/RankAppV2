@@ -1,0 +1,9 @@
+class MainUpTaskController < ApplicationController
+  def index
+	  x1 = UpcomingTask.select("task, timeduration")
+	   x = x1.order("timeduration")
+	   
+	@y = x.all
+  end
+
+end

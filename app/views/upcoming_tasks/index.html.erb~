@@ -1,0 +1,31 @@
+<h1>Listing upcoming_tasks</h1>
+
+<table>
+  <tr>
+    <th>Task</th>
+    <th>Timeduration</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @upcoming_tasks.each do |upcoming_task| %>
+  <tr>
+    <td><%= upcoming_task.task %></td>
+    <td><%= upcoming_task.TimeDuration %></td>
+    <td><%= link_to 'Show', upcoming_task %></td>
+    <td><%= link_to 'Edit', edit_upcoming_task_path(upcoming_task) %></td>
+    <td><%= link_to 'Destroy', upcoming_task, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Upcoming task', new_upcoming_task_path %>
+
+
+<p>
+  <a href="/masters">Go back to admin page</a>
+</p>
+

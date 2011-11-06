@@ -1,0 +1,25 @@
+<%= form_for(@upcoming_task) do |f| %>
+  <% if @upcoming_task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@upcoming_task.errors.count, "error") %> prohibited this upcoming_task from being saved:</h2>
+
+      <ul>
+      <% @upcoming_task.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :task %><br />
+    <%= f.text_field :task %>
+  </div>
+  <div class="field">
+    <%= f.label :TimeDuration %><br />
+    <%= f.text_field :TimeDuration %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

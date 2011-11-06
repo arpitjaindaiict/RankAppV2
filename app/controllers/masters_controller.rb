@@ -2,7 +2,7 @@ require 'digest/md5'
 
 class MastersController < ApplicationController
   
-  USERS = {"admin" => "password"}  # username: admin password: password
+  USERS = {"admin" => "password123"}  # username: admin password: password
 
   before_filter :authenticate
 

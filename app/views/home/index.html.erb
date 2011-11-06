@@ -1,31 +1,11 @@
-<h1><i>Ranks! for this month</i></h1>
-<p></p>
+<html>
 
-<table>
-	<tr>
-		<th>Rank</th>
-		<th>Name</th>
-		<th>Points</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<frameset cols="80%,40%">
 
-  
-  <% i = 0 %>
-  <% @y.each do |rank| %>
-	  
-	  <tr>
-		  <% i= i+1 %>
-		  <td><%= i %></td>
-		<td><%= rank.name %></td>
-		<td><%= rank.points %></td>
-		</tr>
-<% end %>
-</table>
+  <frame src="/rank/index" />
+  <frame src="/main_up_task/index" />
 
+</frameset>
 
-<p>
-  <a href="/masters">admin</a>
-</p>
+</html>
 

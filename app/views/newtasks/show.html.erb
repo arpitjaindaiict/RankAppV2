@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Task:</b>
+  <%= @newtask.task %>
+</p>
+
+<p>
+  <b>Timeduration:</b>
+  <%= @newtask.timeduration %>
+</p>
+
+
+<%= link_to 'Edit', edit_newtask_path(@newtask) %> |
+<%= link_to 'Back', newtasks_path %>

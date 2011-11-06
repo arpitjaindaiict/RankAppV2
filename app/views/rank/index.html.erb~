@@ -1,0 +1,38 @@
+
+<h1 align = "center"> </h1>
+<p></p>
+
+
+<table align = "center" width = "70%">
+	<tr>
+		<th align = "center"> <%= image_tag "hall.jpg", :alt => "Hall of Fame", :border => "0", :width => "150", :height => "150" %></th>
+		
+			<th align = "center"><h3>Name</h3></th>
+			<th align = "center"><h3>Points</h3></th>
+		
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  
+  <% i = 0 %>
+  <% @y.each do |rank| %>
+	  
+	<tr>
+	  <% i= i+1 %>
+	  <td align="center">
+		  <%= if (i==1) then image_tag "gold.jpg", :alt => "Gold", :border => "0", :width => "30", :height => "30"
+		      else if (i==2) then image_tag "silver.jpg", :alt => "Silver", :border => "0", :width => "30", :height => "30"
+		      else if (i==3) then image_tag "bronze.jpg", :alt => "Bronze", :border => "0", :width => "30", :height => "30"
+		      else i 
+		      end
+		      end
+		      end
+		      end %>
+	      </td>
+	  <td align="center"><h3><%= rank.name %></h3></td>
+	  <td align="center"><%= rank.points %></td>
+	</tr>
+<% end %>
+</table>

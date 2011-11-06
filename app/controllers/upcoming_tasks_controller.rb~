@@ -1,0 +1,95 @@
+class UpcomingTasksController < ApplicationController
+	 
+  USERS = {"admin" => "password123"}  # username: admin password: password
+
+  # GET /upcoming_tasks
+  # GET /upcoming_tasks.xml
+  def index
+    @upcoming_tasks = UpcomingTask.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @upcoming_tasks }
+    end
+  end
+
+  # GET /upcoming_tasks/1
+  # GET /upcoming_tasks/1.xml
+  def show
+    @upcoming_task = UpcomingTask.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @upcoming_task }
+    end
+  end
+
+  # GET /upcoming_tasks/new
+  # GET /upcoming_tasks/new.xml
+  def new
+    @upcoming_task = UpcomingTask.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.xml  { render :xml => @upcoming_task }
+    end
+  end
+
+  # GET /upcoming_tasks/1/edit
+  def edit
+    @upcoming_task = UpcomingTask.find(params[:id])
+  end
+
+  # POST /upcoming_tasks
+  # POST /upcoming_tasks.xml
+  def create
+    @upcoming_task = UpcomingTask.new(params[:upcoming_task])
+
+    respond_to do |format|
+      if @upcoming_task.save
+        format.html { redirect_to(@upcoming_task, :notice => 'Upcoming task was successfully created.') }
+        format.xml  { render :xml => @upcoming_task, :status => :created, :location => @upcoming_task }
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @upcoming_task.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # PUT /upcoming_tasks/1
+  # PUT /upcoming_tasks/1.xml
+  def update
+    @upcoming_task = UpcomingTask.find(params[:id])
+
+    respond_to do |format|
+      if @upcoming_task.update_attributes(params[:upcoming_task])
+        format.html { redirect_to(@upcoming_task, :notice => 'Upcoming task was successfully updated.') }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @upcoming_task.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /upcoming_tasks/1
+  # DELETE /upcoming_tasks/1.xml
+  def destroy
+    @upcoming_task = UpcomingTask.find(params[:id])
+    @upcoming_task.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(upcoming_tasks_url) }i
+      format.xml  { head :ok }
+    end
+  end
+
+  
+ private
+    def authenticate
+      authenticate_or_request_with_http_digest() do |username|
+        USERS[username]
+      end
+    end
+
+end

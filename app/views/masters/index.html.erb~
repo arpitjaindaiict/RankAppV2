@@ -1,6 +1,6 @@
-<h1>List of Tasks</h1>
+<h1 align = "center"><i>Assigned Tasks</i></h1>
 
-<table>
+<table align = "center" width = "80%">
   <tr>
     <th>E name</th>
     <th>Task</th>
@@ -15,15 +15,15 @@
 
 <% @masters.each do |master| %>
   <tr>
-    <td><%= master.e_name %></td>
-    <td><%= master.task %></td>
-    <td><%= master.startdate %></td>
-    <td><%= master.enddate %></td>
-    <td><%= master.points %></td>
-    <td><%= master.comment %></td>
-    <td><%= link_to 'Show', master %></td>
-    <td><%= link_to 'Edit', edit_master_path(master) %></td>
-    <td><%= link_to 'Destroy', master, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td align = "center"><%= master.e_name %></td>
+    <td align = "center"><%= master.task %></td>
+    <td align = "center"><%= master.startdate %></td>
+    <td align = "center"><%= master.enddate %></td>
+    <td align = "center"><%= master.points %></td>
+    <td align = "center"><%= master.comment %></td>
+    <td align = "center"><%= link_to 'Show', master %></td>
+    <td align = "center"><%= link_to 'Edit', edit_master_path(master) %></td>
+    <td align = "center"><%= link_to 'Destroy', master, :confirm => 'Do you want to delete this task?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -34,29 +34,8 @@
 
 <%= link_to 'Assign New Task', new_master_path %>
 
-<h1>Grand Total</h1>
-<p></p>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Points</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-  
-
-<% @b.each do |rank| %>
-  <tr>
-    <td><%= rank.name %></td>
-    <td><%= rank.points %></td>
-    </tr>
-<% end %>
-</table>
-
-
 <p>
-  <a href="/">home</a>
+  <a href="/upcoming_tasks">Edit Upcoming Tasks</a>
 </p>
+
+

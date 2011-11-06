@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111105193158) do
+ActiveRecord::Schema.define(:version => 20111106163945) do
 
   create_table "masters", :force => true do |t|
     t.string   "e_name"
@@ -19,6 +19,20 @@ ActiveRecord::Schema.define(:version => 20111105193158) do
     t.date     "enddate"
     t.integer  "points"
     t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "newtasks", :force => true do |t|
+    t.string   "task"
+    t.integer  "timeduration"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "upcoming_tasks", :force => true do |t|
+    t.string   "task"
+    t.integer  "TimeDuration"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

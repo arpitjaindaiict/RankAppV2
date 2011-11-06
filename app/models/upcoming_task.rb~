@@ -1,0 +1,7 @@
+class UpcomingTask < ActiveRecord::Base
+	attr_accessible :task, :timeduration
+
+	validates :task, :presence => true
+	validates :timeduration, :presence =>true
+
+end

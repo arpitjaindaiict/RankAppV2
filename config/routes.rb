@@ -1,4 +1,14 @@
 RankAppV2::Application.routes.draw do
+  get "grandtotal/index"
+
+  resources :newtasks
+
+  get "main_up_task/index"
+
+  get "rank/index"
+
+  resources :upcoming_tasks
+
   get "home/index"
 
   resources :masters

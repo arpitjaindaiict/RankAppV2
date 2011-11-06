@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Task:</b>
+  <%= @upcoming_task.task %>
+</p>
+
+<p>
+  <b>Timeduration:</b>
+  <%= @upcoming_task.TimeDuration %>
+</p>
+
+
+<%= link_to 'Edit', edit_upcoming_task_path(@upcoming_task) %> |
+<%= link_to 'Back', upcoming_tasks_path %>

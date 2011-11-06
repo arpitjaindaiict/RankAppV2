@@ -1,0 +1,2 @@
+module NewtasksHelper
+end

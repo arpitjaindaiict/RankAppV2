@@ -1,0 +1,23 @@
+<h1 align = "center">Grand Total</h1>
+<p></p>
+
+
+<table align = "center" width = "50%">
+  <tr>
+    <th>Name</th>
+    <th>Points</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  
+
+<% @b.each do |rank| %>
+  <tr>
+    <td align = "center"><%= rank.name %></td>
+    <td align = "center"><%= rank.points %></td>
+    </tr>
+<% end %>
+</table>
+
