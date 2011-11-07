@@ -1,7 +1,20 @@
 # Application to rank employees based on the points they have earned.
 
+Apllication is up and running at local server :)
+
+
 Deployed at: http://deep-warrior-9688.heroku.com/
+
+For other machines the main page might not get loaded
+
+the admin link is:
+http://deep-warrior-9688.heroku.com/masters
 
 For admin page
 username: admin
 password: password123
+
+In case the main page is not loaded 
+the main page consists of frames:
+http://deep-warrior-9688.heroku.com/rank/index
+http://deep-warrior-9688.heroku.com/main_up_task/index
