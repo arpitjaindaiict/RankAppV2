@@ -1,11 +1,11 @@
-
+<meta http-equiv="refresh" content="30" />
 
 <h1 align = "center"><i>Tasks to do .. </i></h1>
 <table align = "center">
 	<tr>
 		<th align = "center"> <%= image_tag "task.png", :alt => "No.", :border => "0", :width => "20", :height => "20" %></th>
 		<th align = "center"><h3>Task</h3></th>
-		<th align = "center">Duration</th>
+		<th align = "center"><h3>Duration</h3></th>
     <th></th>
     <th></th>
     <th></th>

@@ -1,17 +1,12 @@
-<html>
-	<body>
+
+<FRAMESET cols="900, *">
+<FRAME src="/rank/index">
+
+</FRAME>
 
 
-<frameset cols="80%,40%">
+<FRAME src="/main_up_task/index">
+</FRAME>
 
-  <frame src="/rank/index" />
-  <frame src="/main_up_task/index" />
-</frameset>
-</body>
-</html>
-
-
-
-
-
+</FRAMESET>
 

@@ -1,4 +1,4 @@
-
+<meta http-equiv="refresh" content="30" />
 <h1 align = "center"> </h1>
 <p></p>
 
@@ -28,7 +28,6 @@
 		      else i 
 		      end
 		      end
-		      end
 		      end %>
 	      </td>
 	  <td align="center"><h3><%= rank.name %></h3></td>
@@ -36,3 +35,4 @@
 	</tr>
 <% end %>
 </table>
+
